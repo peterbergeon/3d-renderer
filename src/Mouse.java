@@ -12,7 +12,7 @@ import java.util.ArrayList;
 public class Mouse extends Shape
 {
     private ArrayList<Shape> shapes;
-    private Shape body, leftEar, rightEar, innerLeftEar, innerRightEar, nose1, nose2, nose3, nose4, leftEye1, rightEye1, leftEye2, rightEye2;
+    private Shape body, leftEar, rightEar, innerLeftEar, innerRightEar, nose1, nose2, nose3, nose4, leftEye1, rightEye1, leftEye2, rightEye2, toe1, toe2, toe3, toe4, toe5, toe6;
     private double radius, x, y, z;
 
     public Mouse(double radius, double x, double y, double z) {
@@ -22,25 +22,25 @@ public class Mouse extends Shape
         this.radius = radius;
         shapes = new ArrayList<Shape>();
 
-        shapes.add(body = new Cube(Color.BLACK, 0.6 * radius, x, y + 0.4 * radius, z + 0.4 * radius));
-        shapes.add(leftEar = new Cube(Color.WHITE, 0.3 * radius, x - 0.7 * radius, y - 0.3 * radius, z + 0.1 * radius));
-        shapes.add(rightEar = new Cube(Color.WHITE, 0.3 * radius, x + 0.7 * radius, y - 0.3 * radius, z + 0.1 * radius));
-        shapes.add(innerLeftEar = new Cube(Color.BLACK, 0.15 * radius, x - 0.7 * radius, y - 0.3 * radius, z - 0.05 * radius - 1));
-        shapes.add(innerRightEar = new Cube(Color.BLACK, 0.15 * radius, x + 0.7 * radius, y - 0.3 * radius, z - 0.05 * radius - 1));
-        shapes.add(nose1 = new Cube(Color.GRAY, 0.2 * radius, x, y + 0.6 * radius, z - 0.2 * radius));
-        shapes.add(nose2 = new Cube(Color.GRAY, 0.1 * radius, x, y + 0.6 * radius, z - 0.4 * radius));
-        shapes.add(nose3 = new Cube(Color.GRAY, 0.05 * radius, x, y + 0.6 * radius, z - 0.5 * radius));
-        shapes.add(nose4 = new Cube(Color.BLACK, 0.025 * radius, x, y + 0.6 * radius, z - 0.55 * radius));
-        shapes.add(leftEye1 = new Cube(Color.BLUE, 0.1 * radius, x - 0.3 * radius, y + 0.1 * radius, z - 0.1 * radius - 1));
-        shapes.add(rightEye1 = new Cube(Color.BLUE, 0.1 * radius, x + 0.3 * radius, y + 0.1 * radius, z - 0.1 * radius - 1));
-        shapes.add(leftEye2 = new Cube(Color.BLACK, 0.05 * radius, x - 0.25 * radius, y + 0.15 * radius, z - 0.15 * radius - 2));
-        shapes.add(rightEye2 = new Cube(Color.BLACK, 0.05 * radius, x + 0.25 * radius, y + 0.15 * radius, z - 0.15 * radius - 2));
-        shapes.add(new Cube(Color.WHITE, 0.05 * radius, x - 0.25 * radius, y + 0.95 * radius, z - 0.25 * radius));
-        shapes.add(new Cube(Color.WHITE, 0.05 * radius, x - 0.4 * radius, y + 0.95 * radius, z - 0.25 * radius));
-        shapes.add(new Cube(Color.WHITE, 0.05 * radius, x - 0.55 * radius, y + 0.95 * radius, z - 0.25 * radius));
-        shapes.add(new Cube(Color.WHITE, 0.05 * radius, x + 0.25 * radius, y + 0.95 * radius, z - 0.25 * radius));
-        shapes.add(new Cube(Color.WHITE, 0.05 * radius, x + 0.4 * radius, y + 0.95 * radius, z - 0.25 * radius));
-        shapes.add(new Cube(Color.WHITE, 0.05 * radius, x + 0.55 * radius, y + 0.95 * radius, z - 0.25 * radius));
+        shapes.add(body = new Cube(Color.BLACK, 0.6 * radius, x, y + 0.4 * radius, z + 0.15 * radius));
+        shapes.add(leftEar = new Cube(Color.WHITE, 0.3 * radius, x - 0.7 * radius, y - 0.3 * radius, z - 0.15 * radius));
+        shapes.add(rightEar = new Cube(Color.WHITE, 0.3 * radius, x + 0.7 * radius, y - 0.3 * radius, z - 0.15 * radius));
+        shapes.add(innerLeftEar = new Cube(Color.BLACK, 0.15 * radius, x - 0.7 * radius, y - 0.3 * radius, z - 0.3 * radius - 1));
+        shapes.add(innerRightEar = new Cube(Color.BLACK, 0.15 * radius, x + 0.7 * radius, y - 0.3 * radius, z - 0.3 * radius - 1));
+        shapes.add(nose1 = new Cube(Color.GRAY, 0.2 * radius, x, y + 0.6 * radius, z - 0.45 * radius));
+        shapes.add(nose2 = new Cube(Color.GRAY, 0.1 * radius, x, y + 0.6 * radius, z - 0.65 * radius));
+        shapes.add(nose3 = new Cube(Color.GRAY, 0.05 * radius, x, y + 0.6 * radius, z - 0.75 * radius));
+        shapes.add(nose4 = new Cube(Color.BLACK, 0.025 * radius, x, y + 0.6 * radius, z - 0.8 * radius));
+        shapes.add(leftEye1 = new Cube(Color.BLUE, 0.1 * radius, x - 0.3 * radius, y + 0.1 * radius, z - 0.35 * radius - 1));
+        shapes.add(rightEye1 = new Cube(Color.BLUE, 0.1 * radius, x + 0.3 * radius, y + 0.1 * radius, z - 0.35 * radius - 1));
+        shapes.add(leftEye2 = new Cube(Color.BLACK, 0.05 * radius, x - 0.25 * radius, y + 0.15 * radius, z - 0.4 * radius - 2));
+        shapes.add(rightEye2 = new Cube(Color.BLACK, 0.05 * radius, x + 0.25 * radius, y + 0.15 * radius, z - 0.4 * radius - 2));
+        shapes.add(toe3 = new Cube(Color.WHITE, 0.05 * radius, x - 0.25 * radius, y + 0.95 * radius, z - 0.5 * radius));
+        shapes.add(toe2 = new Cube(Color.WHITE, 0.05 * radius, x - 0.4 * radius, y + 0.95 * radius, z - 0.5 * radius));
+        shapes.add(toe1 = new Cube(Color.WHITE, 0.05 * radius, x - 0.55 * radius, y + 0.95 * radius, z - 0.5 * radius));
+        shapes.add(toe4 = new Cube(Color.WHITE, 0.05 * radius, x + 0.25 * radius, y + 0.95 * radius, z - 0.5 * radius));
+        shapes.add(toe5 = new Cube(Color.WHITE, 0.05 * radius, x + 0.4 * radius, y + 0.95 * radius, z - 0.5 * radius));
+        shapes.add(toe6 = new Cube(Color.WHITE, 0.05 * radius, x + 0.55 * radius, y + 0.95 * radius, z - 0.5 * radius));
     }
 
     public void draw(Graphics2D g2) {
